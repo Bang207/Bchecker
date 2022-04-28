@@ -53,7 +53,7 @@ elif menu == 'Text':
 	text = st.text_area('Copy and Paste your document here')
 if text != '':
 	score, sim_words, clean_text, urls = main.text_similarity_score(text)
-	data_words = clean_text.split()
+	data_words = text.split()
 	colored_text = '<h>'
 	for i in range(len(data_words)):
 		if data_words[i] in sim_words:
